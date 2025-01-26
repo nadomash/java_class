@@ -29,9 +29,9 @@ public class TestClassDemo {
 
                 runBefore(methodsBefore, object);
                 runTest(method, object);
-
+                logger.debug(method.toString() + " succeeded");
             } catch (java.lang.Throwable e){
-                logger.debug("Test failed");
+                logger.debug(method.toString() + " failed");
             }
             finally {
                 runAfter(methodsAfter, object);
